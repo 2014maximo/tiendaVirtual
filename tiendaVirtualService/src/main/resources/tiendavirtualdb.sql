@@ -25,6 +25,29 @@ INSERT INTO `categoria` (`id`, `nombre`, `estado`, `descripcion`) VALUES
 
 -- --------------------------------------------------------
 
+
+-----------------------------------------------------------
+-- Estructura de tabla para la tabla `usuario`
+-----------------------------------------------------------
+
+CREATE TABLE `usuario` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `apellido` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `email` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `telefono` int COLLATE utf8_spanish_ci NOT NULL,
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+---------------------------------------------------------------
+-- Volcado de datos para la tabla `categoria`
+---------------------------------------------------------------
+
+INSERT INTO `usuario` (`id`, `nombre`, `apellido`, `email`, `telefono`) VALUES
+(1, 'Alex', 'Muñoz', 'alexuriel.777@gmail.com', '3148007248',),
+(1, 'Juan', 'Sanchez', 'juansanchez@gmail.com', '3129889909',);
+
+-- --------------------------------------------------------
 --------------------------------------------------------------
 -- Estructura de tabla para la tabla `producto`
 --------------------------------------------------------------
@@ -49,7 +72,7 @@ INSERT INTO `producto` (`id`, `nombre`, `descripcion`, `estado`, `precio`, `cant
 (2, 'Ropa para hombre', 'basico par hombre', 1, 32000, 43, 'otro', 2);
 
 ---------------------------------------------------------------
--- Índices para tablas volcadas
+-- Ã�ndices para tablas volcadas
 ---------------------------------------------------------------
 
 ---------------------------------------------------------------
