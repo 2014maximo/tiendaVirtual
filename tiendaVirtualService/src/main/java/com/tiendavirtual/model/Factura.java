@@ -1,5 +1,7 @@
 package com.tiendavirtual.model;
 
+import java.sql.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,19 +20,17 @@ import lombok.Setter;
 @AllArgsConstructor
 @Builder
 @Entity
-public class Categoria {
-
+public class Factura {
+	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	
-	@Column(name = "nombre")
-	private String nombre;
+	@Column(name = "fecha")
+	private Date fecha;
 	
-	@Column(name = "estado")
-	private boolean estado;
+	@Column(name = "total")
+	private Integer total;
 	
-	@Column(name = "descripcion")
-	private String descripcion;
-	
+
 }
